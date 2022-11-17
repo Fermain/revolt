@@ -50,13 +50,6 @@ export interface ComponentOptions {
   specialProp: string;
 }
 
-// const test = new Component<ComponentOptions>(`<temp/>`, {
-//   specialProp: "hello"
-// })
-
-
-// test.data?.specialProp
-
 const test = new Component<ComponentOptions>(`<temp/>`, {
   specialProp: "hello"
 }, {
