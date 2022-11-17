@@ -1,0 +1,46 @@
+<template
+  ><style>
+    .dropdown {
+      position: relative;
+      grid-column: -1;
+      padding: 0.5rem;
+    }
+
+    .dropdown-button {
+      border: 0;
+      background-color: var(--color-dark);
+      color: var(--color-light);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .dropdown label {
+      cursor: pointer;
+      font-size: 2rem;
+    }
+
+    .dropdown nav {
+      display: none;
+      position: absolute;
+      right: 0;
+      padding: 0.5rem;
+    }
+
+    .dropdown.open nav {
+      display: block;
+    }
+  </style>
+
+  <div class="dropdown">
+    <button onclick="toggle(event)" class="dropdown-button">☰</button>
+    <nav>
+      <slot></slot>
+    </nav>
+  </div>
+
+  <script type="module">
+    function toggle({ target }) {
+      target.parentElement.classList.toggle('open');
+    }
+  </script>
+</template>

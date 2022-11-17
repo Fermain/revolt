@@ -1,0 +1,27 @@
+<template>
+  <style>
+    header {
+      display: grid;
+      grid-template-columns: 3rem max-content 1fr auto;
+      align-items: center;
+      background-color: var(--color-light);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    revolt-dropdown {
+      grid-column: -1;
+    }
+  </style>
+
+  <header>
+    <div><slot name="logo"></slot></div>
+    <div><slot name="title">App Title</slot></div>
+    <revolt-dropdown>
+      <slot name="nav"></slot>
+    </revolt-dropdown>
+  </header>
+</template>

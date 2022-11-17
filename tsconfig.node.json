@@ -1,0 +1,11 @@
+{
+  "exclude": ["node_modules", "src/final", "src/components", "src/lib"],
+  "include": ["src/njs"],
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "njs",
+    "sourceMap": true,
+    "strict": true,
+    "skipLibCheck": true,
+  }
+}

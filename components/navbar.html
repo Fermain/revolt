@@ -1,0 +1,41 @@
+<template>
+  <style>
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background-color: currentColor;
+      gap: 1px;
+      padding: 1px;
+      display: flex;
+      flex-direction: column;
+    }    
+
+    img {
+      width: 100%;
+    }
+
+    a {
+      display: block;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      color: inherit;
+      background-color: white;
+      transition: background-color 300ms ease;
+    }
+
+    a:hover, a:visited {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+  </style>
+
+  <revolt-header>
+    <img slot="logo" src="/assets/img/logo.png" alt="Revolt!">
+    <h1 slot="title">Revolt!</h1>
+    <ul slot="nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul> 
+  </revolt-header>
+</template>
